@@ -40,8 +40,8 @@ function max_array($arr){
   foreach($arr as $a){
     // ここで配列の中の1番大きい値を探したい
     //もしmaxnumbeｒよりaが大きかったら、maxnumberにaを代入する。
-    if(){
-        
+    if ($max_number < $a) {
+        $max_number = $a;
     }
   }
 
@@ -52,8 +52,52 @@ echo "\n";
 
 //5.下記のビルトイン関数の用途、使い方を調べて実際に使ってみてください
 
+
 // strip_tags
+$str = "<h1>strip_tags関数</h1>"
+  . "<p>タグ取り除くよっ！</p>";
+echo strip_tags($str) ."\n";
+
+
 // array_push
+$members=array("一郎","二郎","三郎");
+            array_push($members,"四郎","五郎");
+            print_r($members);
+
+
 // array_merge
+//配列を作成
+$array1 = [1, 2, 3];
+$array2 = [10, 20, 30];
+$array3 = [100, 200, 300];
+ 
+//配列を結合する
+$array = array_merge($array1, $array2, $array3);
+ 
+print_r($array);
+
+
 // time, mktime
+$time = mktime(9);
+  var_dump(date('Y年m月d日h時i分s秒', $time));
+  print('<br/>');
+
+  $time = mktime(10, 10, 10);
+  var_dump(date('Y年m月d日h時i分s秒', $time));
+  print('<br/>');
+
+  $time = mktime(0, 0, 0, 1, 1, 2020);
+  var_dump(date('Y年m月d日h時i分s秒', $time));
+  print('<br/>');
+  
+  
 // date
+// 現在日付をフォーマットする
+echo date('Y/m/d');
+echo '<br>';
+ 
+// 現在日時をフォーマットする
+echo date('Y-m-d H:i:s');
+echo '<br>';
+echo date('Y年m月d日 H時i分s秒');
+echo '<br>';
