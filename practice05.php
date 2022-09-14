@@ -1,8 +1,8 @@
 <?php
 //1.$name にあなたの名前を代入し、 if文で $name があなたの名前だったら 「私は あなたの名前 です」、
 //もし違ったら「あなたの名前ではありません」と表示するように実装してください
-$name = arima;
-if ($name = arima) {
+$name = "arima";
+if ($name == "arima") {
     echo "私はあなたの名前です";
 }
 else {
@@ -24,8 +24,10 @@ foreach($fruits as $fruit){
 $start = 1;
 $end = 100;
 
-for($i = $start; $i < $end; $i++){
+for($i = $start; $i <= $end; $i++){
 
   if($i % 5 == 0){
-    echo $i
+    echo $i;
+    echo "\n";
   }
+}
